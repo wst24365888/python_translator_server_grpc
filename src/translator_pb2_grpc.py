@@ -15,7 +15,7 @@ class TranslatorStub(object):
             channel: A grpc.Channel.
         """
         self.Translate = channel.unary_unary(
-                '/python_translator_server_grpc.Translator/Translate',
+                '/translator_grpc.Translator/Translate',
                 request_serializer=translator__pb2.TranslateRequest.SerializeToString,
                 response_deserializer=translator__pb2.TranslateReply.FromString,
                 )
@@ -40,7 +40,7 @@ def add_TranslatorServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'python_translator_server_grpc.Translator', rpc_method_handlers)
+            'translator_grpc.Translator', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -59,7 +59,7 @@ class Translator(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/python_translator_server_grpc.Translator/Translate',
+        return grpc.experimental.unary_unary(request, target, '/translator_grpc.Translator/Translate',
             translator__pb2.TranslateRequest.SerializeToString,
             translator__pb2.TranslateReply.FromString,
             options, channel_credentials,

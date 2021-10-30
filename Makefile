@@ -5,4 +5,4 @@ install_reqs:
 	pip install -r requirements.txt
 
 run:
-	python server.py
+	@python server.py

@@ -19,10 +19,11 @@ class Translator(translator_pb2_grpc.TranslatorServicer):
         self.translator = translatepy.Translator()
 
     def Translate(self, request, context):
-        return translator_pb2.Translate(result=self.translateTo(request.sourceContent, request.sourceLang, request.targetLang))
+        return translator_pb2.TranslateReply(result=self.translateTo(request.sourceContent, request.sourceLang, request.targetLang))
 
     def translateTo(self, sourceContent, sourceLang, targetLang):
-        return self.translator.translate(sourceContent, targetLang, source_language=sourceLang)
+        print("Given source content: " + sourceContent)
+        return self.translator.translate(sourceContent, targetLang, source_language=sourceLang).result
 
 
 def serve():

@@ -15,11 +15,11 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='translator.proto',
-  package='python_translator_server_grpc',
+  package='translator_grpc',
   syntax='proto3',
-  serialized_options=b'\n(com.xyphuz.python_translator_server_grpcB\032PythonTranslatorServerGRPCP\001\242\002\004PTSG',
+  serialized_options=b'\n\032com.xyphuz.translator_grpcB\016TranslatorGRPCP\001\242\002\004CXTG',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10translator.proto\x12\x1dpython_translator_server_grpc\"Q\n\x10TranslateRequest\x12\x15\n\rsourceContent\x18\x01 \x01(\t\x12\x12\n\nsourceLang\x18\x02 \x01(\t\x12\x12\n\ntargetLang\x18\x03 \x01(\t\" \n\x0eTranslateReply\x12\x0e\n\x06result\x18\x01 \x01(\t2{\n\nTranslator\x12m\n\tTranslate\x12/.python_translator_server_grpc.TranslateRequest\x1a-.python_translator_server_grpc.TranslateReply\"\x00\x42O\n(com.xyphuz.python_translator_server_grpcB\x1aPythonTranslatorServerGRPCP\x01\xa2\x02\x04PTSGb\x06proto3'
+  serialized_pb=b'\n\x10translator.proto\x12\x0ftranslator_grpc\"Q\n\x10TranslateRequest\x12\x15\n\rsourceContent\x18\x01 \x01(\t\x12\x12\n\nsourceLang\x18\x02 \x01(\t\x12\x12\n\ntargetLang\x18\x03 \x01(\t\" \n\x0eTranslateReply\x12\x0e\n\x06result\x18\x01 \x01(\t2_\n\nTranslator\x12Q\n\tTranslate\x12!.translator_grpc.TranslateRequest\x1a\x1f.translator_grpc.TranslateReply\"\x00\x42\x35\n\x1a\x63om.xyphuz.translator_grpcB\x0eTranslatorGRPCP\x01\xa2\x02\x04\x43XTGb\x06proto3'
 )
 
 
@@ -27,28 +27,28 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _TRANSLATEREQUEST = _descriptor.Descriptor(
   name='TranslateRequest',
-  full_name='python_translator_server_grpc.TranslateRequest',
+  full_name='translator_grpc.TranslateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sourceContent', full_name='python_translator_server_grpc.TranslateRequest.sourceContent', index=0,
+      name='sourceContent', full_name='translator_grpc.TranslateRequest.sourceContent', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sourceLang', full_name='python_translator_server_grpc.TranslateRequest.sourceLang', index=1,
+      name='sourceLang', full_name='translator_grpc.TranslateRequest.sourceLang', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='targetLang', full_name='python_translator_server_grpc.TranslateRequest.targetLang', index=2,
+      name='targetLang', full_name='translator_grpc.TranslateRequest.targetLang', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -66,21 +66,21 @@ _TRANSLATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51,
-  serialized_end=132,
+  serialized_start=37,
+  serialized_end=118,
 )
 
 
 _TRANSLATEREPLY = _descriptor.Descriptor(
   name='TranslateReply',
-  full_name='python_translator_server_grpc.TranslateReply',
+  full_name='translator_grpc.TranslateReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='python_translator_server_grpc.TranslateReply.result', index=0,
+      name='result', full_name='translator_grpc.TranslateReply.result', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -98,8 +98,8 @@ _TRANSLATEREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=134,
-  serialized_end=166,
+  serialized_start=120,
+  serialized_end=152,
 )
 
 DESCRIPTOR.message_types_by_name['TranslateRequest'] = _TRANSLATEREQUEST
@@ -109,14 +109,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 TranslateRequest = _reflection.GeneratedProtocolMessageType('TranslateRequest', (_message.Message,), {
   'DESCRIPTOR' : _TRANSLATEREQUEST,
   '__module__' : 'translator_pb2'
-  # @@protoc_insertion_point(class_scope:python_translator_server_grpc.TranslateRequest)
+  # @@protoc_insertion_point(class_scope:translator_grpc.TranslateRequest)
   })
 _sym_db.RegisterMessage(TranslateRequest)
 
 TranslateReply = _reflection.GeneratedProtocolMessageType('TranslateReply', (_message.Message,), {
   'DESCRIPTOR' : _TRANSLATEREPLY,
   '__module__' : 'translator_pb2'
-  # @@protoc_insertion_point(class_scope:python_translator_server_grpc.TranslateReply)
+  # @@protoc_insertion_point(class_scope:translator_grpc.TranslateReply)
   })
 _sym_db.RegisterMessage(TranslateReply)
 
@@ -125,17 +125,17 @@ DESCRIPTOR._options = None
 
 _TRANSLATOR = _descriptor.ServiceDescriptor(
   name='Translator',
-  full_name='python_translator_server_grpc.Translator',
+  full_name='translator_grpc.Translator',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=168,
-  serialized_end=291,
+  serialized_start=154,
+  serialized_end=249,
   methods=[
   _descriptor.MethodDescriptor(
     name='Translate',
-    full_name='python_translator_server_grpc.Translator.Translate',
+    full_name='translator_grpc.Translator.Translate',
     index=0,
     containing_service=None,
     input_type=_TRANSLATEREQUEST,

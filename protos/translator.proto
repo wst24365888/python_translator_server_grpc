@@ -1,11 +1,11 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.xyphuz.python_translator_server_grpc";
-option java_outer_classname = "PythonTranslatorServerGRPC";
-option objc_class_prefix = "PTSG";
+option java_package = "com.xyphuz.translator_grpc";
+option java_outer_classname = "TranslatorGRPC";
+option objc_class_prefix = "CXTG";
 
-package python_translator_server_grpc;
+package translator_grpc;
 
 service Translator {
   rpc Translate (TranslateRequest) returns (TranslateReply) {}
