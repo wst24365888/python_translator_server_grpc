@@ -27,7 +27,7 @@ class Translator(translator_pb2_grpc.TranslatorServicer):
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    translator_pb2_grpc.add_GreeterServicer_to_server(Translator(), server)
+    translator_pb2_grpc.add_TranslatorServicer_to_server(Translator(), server)
     server.add_insecure_port('[::]:50051')
     server.start()
     try:
