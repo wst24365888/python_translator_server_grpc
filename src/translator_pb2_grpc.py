@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import translator_pb2 as translator__pb2
+import src.translator_pb2 as translator__pb2
 
 
 class TranslatorStub(object):
