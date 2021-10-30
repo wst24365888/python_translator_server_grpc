@@ -1,0 +1,5 @@
+translatepy==1.7
+grpcio==1.41.1
+grpcio-tools==1.41.1
+grpc==1.0.0
+protobuf==3.19.1
